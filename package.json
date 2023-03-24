@@ -5,15 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex"
+    "knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex",
+    "build": "tsup src --out-dir build",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.15.5",
+    "@types/supertest": "^2.0.12",
+    "supertest": "^6.3.3",
+    "tsup": "^6.7.0",
     "tsx": "^3.12.6",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "vitest": "^0.29.7"
   },
   "dependencies": {
     "@fastify/cookie": "^8.3.0",
